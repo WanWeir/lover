@@ -7,10 +7,15 @@
     <style type="text/css">
     /* 标签重定义 */
 
+    audio {
+        display: none;
+    }
+
+
     body {
         padding: 0;
         margin: 0;
-        background: #ddd  repeat;
+        background: #ddd repeat;
     }
 
     img {
@@ -195,8 +200,8 @@
     }
     /**
      * 瀑布流主函数
-     * @param  wrap	[Str] 外层元素的ID
-     * @param  box 	[Str] 每一个box的类名
+     * @param  wrap [Str] 外层元素的ID
+     * @param  box  [Str] 每一个box的类名
      */
     function PBL(wrap, box) {
         //1.获得外层以及每一个box
@@ -221,8 +226,8 @@
     }
     /**
      * 获取类元素
-     * @param  warp		[Obj] 外层
-     * @param  className	[Str] 类名
+     * @param  warp     [Obj] 外层
+     * @param  className    [Str] 类名
      */
     function getClass(wrap, className) {
         var obj = wrap.getElementsByTagName('*');
@@ -236,7 +241,7 @@
     }
     /**
      * 获取最小列的索引
-     * @param  minH	 [Num] 最小高度
+     * @param  minH  [Num] 最小高度
      * @param  everyH [Arr] 所有列高度的数组
      */
     function getIndex(minH, everyH) {
@@ -262,9 +267,9 @@
     }
     /**
      * 设置加载样式
-     * @param  box 	[obj] 设置的Box
-     * @param  top 	[Num] box的top值
-     * @param  left 	[Num] box的left值
+     * @param  box  [obj] 设置的Box
+     * @param  top  [Num] box的top值
+     * @param  left     [Num] box的left值
      * @param  index [Num] box的第几个
      */
     var getStartNum = 0; //设置请求加载的条数的位置
@@ -285,6 +290,10 @@
 </head>
 
 <body>
+    <center>
+        <audio autoplay="autoplay" controls="controls" loop="loop" preload="auto" src="./tkzc.mp3" /> 你的浏览器版本太低，不支持audio标签
+        </audio>
+    </center>
     <section id="title">
         <h2>我爱学习亲亲</h2>By Wanwer.
     </section>
